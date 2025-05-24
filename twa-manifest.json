@@ -21,11 +21,12 @@
     "path": "/home/ehsan/projects/my-twa-app/android.keystore",
     "alias": "android"
   },
-  "appVersionName": "5",
-  "appVersionCode": 5,
+  "appVersionName": "8",
+  "appVersionCode": 8,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
   "webManifestUrl": "https://my-twa-app.vercel.app/manifest.webmanifest",
+  "fallbackType": "webview",
   "features": {},
   "alphaDependencies": {
     "enabled": false
@@ -33,7 +34,7 @@
   "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,
   "isMetaQuest": false,
-  "fullScopeUrl": "https://my-twa-app.vercel.app/",
+  "fullScopeUrl": "https://sendbypass.com/",
   "minSdkVersion": 21,
   "orientation": "any",
   "fingerprints": [],
@@ -42,5 +43,5 @@
   "protocolHandlers": [],
   "fileHandlers": [],
   "launchHandlerClientMode": "",
-  "appVersion": "5"
+  "appVersion": "8"
 }

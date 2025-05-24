@@ -27,6 +27,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          src="https://accounts.google.com/gsi/client"
+          async
+          defer
+        ></script>
       </head>
 
       <body

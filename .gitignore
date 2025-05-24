@@ -23,6 +23,9 @@
 .gradle
 .gradle*
 /gradle
+*.apk
+*.aab
+*.idsig
 
 # misc
 .DS_Store

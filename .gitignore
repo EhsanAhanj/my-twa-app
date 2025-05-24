@@ -19,6 +19,10 @@
 
 # production
 /build
+/build*
+.gradle
+.gradle*
+/gradle
 
 # misc
 .DS_Store
@@ -41,3 +45,5 @@ yarn-error.log*
 next-env.d.ts
 
 certificates
+
+/app

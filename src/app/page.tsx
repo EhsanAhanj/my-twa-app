@@ -1,7 +1,26 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
+
+declare global {
+  interface Window {
+    google:
+      | {
+          accounts: {
+            id: {
+              initialize: (config: {
+                client_id: string;
+                callback: () => void;
+              }) => void;
+              prompt: () => void;
+            };
+          };
+        }
+      | undefined;
+  }
+}
 
 export default function HomePage() {
   const { data: session } = useSession();
@@ -18,11 +37,11 @@ export default function HomePage() {
         </button>
         <button
           onClick={() => {
-            window.google.accounts.id.initialize({
+            (window.google as any).accounts.id.initialize({
+              client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!,
               callback: () => alert("salam"),
-              client_id: process.env.GOOGLE_CLIENT_ID!,
             });
-            google.accounts.id.prompt();
+            (window.google as any).accounts.id.prompt();
           }}
           className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow"
         >
